@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-color: rgb(2, 2, 54);
+    background-image: url("images/colorbg.png");
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+    animation:  bgcol 10s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes bgcol{
+    50%{
+    background-image: url("images/ssbanner.png");
+    }
+  }
+  .header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5625rem 7.5rem;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .header h1 {
+    color: white;
+    font-size: 2.5rem;
+    user-select: none;
+  }
+  
+  .header_btn {
+    text-decoration: none;
+    color: rgb(219, 248, 248);
+    padding: 0.8rem 2rem;
+    margin-right: 0;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid black transparent;
+  }
+  
+  .header_btn:hover {
+    border: 1px solid aqua;
+    color: rgba(219, 248, 248, 0.779);
+  }
+  
+  .navbar-toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 5% 20px 0 10px;
+    user-select: none;
+  }
+  
+  .content h2:hover,
+  .content h3:hover,
+  .content p:hover {
+    color: rgb(209, 225, 240);
+  }
+  
+  .image img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 500px;
+    display: block;
+    margin: 0px 0 0 1.875rem;
+    border: 10px solid pink;
+    box-shadow: 0 0 10px 5px #ff00ff;
+    animation: disco 2s infinite;
+    opacity: 1;
+  }
+  
+  figcaption {
+    position: absolute;
+    left: -10000px;
+  }
+  
+  .about h2 {
+    display: block;
+    color: white;
+    margin: 20px 0 0 70px;
+    font-size: 3rem;
+  }
+  
+  .about h3 {
+    display: block;
+    color: white;
+    margin: 10px 0 0 70px;
+    font-size: 3rem;
+  }
+  
+  .about p {
+    font-size: 2rem;
+    color: white;
+    margin: 10px 0 40px 70px;
+  }
+  
+  .about button#more-about-btn {
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(5, 230, 241);
+    padding: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 2px solid;
+    border-radius: 50px;
+    margin: 10px 0 15px 70px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .about button#more-about-btn:hover {
+    border: 2px solid hsla(180, 100%, 50%, 0.585);
+    color: hsla(180, 100%, 50%, 0.585);
+  }
+  
+  .about .social-icons {
+    display: none;
+    margin-top: 15px;
+    margin-left: 75px;
+  }
+  
+  .about .social-icons.active {
+    display: flex;
+  }
+  
+  .about .social-icons .icon {
+    margin-right: 10px;
+    color: aqua;
+    font-size: 45px;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 992px) {
+    .header {
+      padding-right: 1rem;
+    }
+   
+    .navbar-toggle {
+      display: flex;
+      align-items: center;
+    }
+  
+    .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 5rem;
+      right: 1rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      border-radius: 5px;
+    }
+  
+    .navbar a {
+      display: block;
+      padding: 0.5rem 0;
+    }
+   
+    .content {
+      display: block;
+      margin: 5% 20px 0 10px;
+      user-select: none;
+    }
+  
+    .image img {
+      display: block;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 500px;
+      margin: 10px auto;
+      border: 5px solid pink;
+      box-shadow: 0 0 5px rgb(255, 25, 0),
+        0 0 20px rgb(137, 10, 109), 0 0 50px rgb(20, 64, 138),
+        0 0 250px rgb(23, 130, 165), 0 0 20px rgb(4, 35, 33);
+    }
+  
+    .about button#more-about-btn {
+      font-size: 1rem;
+      margin: 10px 0 20px 70px;
+    }
+  
+    .about h2,
+    .about h3,
+    .about p {
+      font-size: 2rem;
+      margin: 10px 0 40px 70px;
+    }
+  
+    .about .social-icons {
+      margin-top: 2px;
+      margin-left: 75px;
+    }
+  
+    .about .social-icons .icon {
+      margin-right: 10px;
+      color: aqua;
+      font-size: 30px;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+  
+  @keyframes disco {
+    15% {
+      box-shadow: 0 0 20px 1px violet;
+    }
+    30% {
+      box-shadow: 0 0 20px 1px indigo;
+    }
+    45% {
+      box-shadow: 0 0 20px 1px blue;
+    }
+    60% {
+      box-shadow: 0 0 20px 1px green;
+    }
+    75% {
+      box-shadow: 0 0 20px 1px yellow;
+    }
+    90% {
+      box-shadow: 0 0 20px 1px orange;
+    }
+    100% {
+      box-shadow: 0 0 20px 1px red;
+    }
+  }
+  
