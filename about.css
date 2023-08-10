@@ -15,8 +15,20 @@
   }
 
   @keyframes bgcol{
-    50%{
+    0%{
+      background-image: url("images/colorbg.png");
+    }
+    25%{
     background-image: url("images/bgcolor2.png");
+    }
+    50%{
+      background-image: url("images/bg2.png");
+    }
+    75%{
+      background-image: url("images/bg3.png");
+    }
+    100%{
+      background-image: url("images/colorbg.png");
     }
   }
   .header {
@@ -107,7 +119,7 @@
   .about h3 {
     display: block;
     color: white;
-    margin: 10px 0 0 70px;
+    margin: 10px 0 0 4.375rem;
     font-size: 3rem;
   }
   
@@ -155,9 +167,14 @@
     text-decoration: none;
   }
   
-  @media (max-width: 992px) {
+  @media (max-width: 932px) {
+    .about{
+      margin-left: 20px;
+    }
     .header {
-      padding-right: 1rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
     }
    
     .navbar-toggle {
@@ -174,6 +191,7 @@
       background-color: rgba(0, 0, 0, 0.8);
       padding: 1rem;
       border-radius: 5px;
+
     }
   
     .navbar a {
@@ -183,16 +201,16 @@
    
     .content {
       display: block;
-      margin: 5% 20px 0 10px;
+      margin: 3% 20px 0 10px;
       user-select: none;
     }
   
     .image img {
       display: block;
-      width: 15rem;
-      height: 15rem;
+      width: 10rem;
+      height: 10rem;
       border-radius: 500px;
-      margin: 10px auto;
+      margin: 20px auto;
       border: 5px solid pink;
       box-shadow: 0 0 5px rgb(255, 25, 0),
         0 0 20px rgb(137, 10, 109), 0 0 50px rgb(20, 64, 138),
@@ -201,15 +219,23 @@
   
     .about button#more-about-btn {
       font-size: 1rem;
-      margin: 10px 0 20px 70px;
+      margin: 10px 0 20px 20px;
     }
   
     .about h2,
     .about h3,
     .about p {
       font-size: 2rem;
-      margin: 10px 0 40px 70px;
+      margin: 10px 0 40px 20px;
     }
+
+    /* .about:is(h2, h3, p){
+      font-size: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0 40px 30px;
+    } */
   
     .about .social-icons {
       margin-top: 2px;
