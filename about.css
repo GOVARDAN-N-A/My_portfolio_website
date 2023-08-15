@@ -194,8 +194,9 @@
   
   .about .social-icons .icon {
     margin-right: 10px;
-    color: rgba(255, 116, 2, 0.91);
-    font-size: 45px;
+/*     color: rgba(255, 116, 2, 0.91);*/
+    color: black;
+    font-size: 45px; 
     text-decoration: none;
     background-color: transparent;
 
