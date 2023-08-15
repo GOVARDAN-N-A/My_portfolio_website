@@ -3,17 +3,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   body {
     min-height: 100vh;
     background-color: rgb(2, 2, 54);
-    background-image: url("images/bstar.jpg");
+    /* background-image: url("images/bstar.jpg"); */
+    background-color: #f0f1f2;
     z-index: -1;
     background-size: cover;
     font-family: 'Times New Roman', Times, serif;
     animation:  bgcol 10s ease-in-out infinite;
     animation-delay: 1s;
+  }
+
+  #pre-loading{
+    background: #f0f1f3 url("images/loading\ \(1\).gif") no-repeat center;
+    background-size: 15%;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+  }
+
+  .first{
+    margin-bottom: 10%;
   }
 
   /* @keyframes bgcol{
@@ -34,7 +50,7 @@
     }
   } */
   .header {
-    position: relative;
+    position: static;
     top: 0;
     left: 0;
     width: 100%;
@@ -42,6 +58,7 @@
     background: transparent;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     animation: head_top 0.8s linear;
   }
   @keyframes head_top{
@@ -50,14 +67,14 @@
     }
   }
   .header h1 {
-    color: white;
+    color: rgb(255, 0, 0);
     font-size: 2.5rem;
     user-select: none;
   }
   
   .header_btn {
     text-decoration: none;
-    color: rgb(219, 248, 248);
+    color: rgb(255, 0, 0);
     padding: 0.8rem 2rem;
     margin-right: 0;
     font-size: 1.5rem;
@@ -68,13 +85,13 @@
   .header_btn:hover {
     /* border: 1px solid aqua; */
 
-    color: rgb(255, 145, 11)
+    color: rgb(0, 0, 0)
   }
   
   .navbar-toggle {
     display: none;
     cursor: pointer;
-    color: white;
+    color: rgb(255, 0, 0);
     font-size: 2rem;
     padding: 0.5rem;
   }
@@ -83,21 +100,22 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 10px;
+    /* margin-top: 40px; */
+    font-weight: 900;
   } 
   
   .content {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    margin: 5% 20px 0 10px;
+    margin: 8% 20px 0 10px;
     user-select: none;
   }
   
   .content h2:hover,
   .content h3:hover,
   .content p:hover {
-    color: rgba(255, 174, 0, 0.999);
+    color: rgba(255, 0, 0, 0.69);
   }
   
   .image img {
@@ -106,10 +124,13 @@
     border-radius: 500px;
     display: block;
     margin: 0px 0 0 1.875rem;
-    border: 10px solid pink;
-    box-shadow: 0 0 10px 5px #ff00ff;
-    animation: disco 2s linear infinite;
-    opacity: 1;
+    /* border: 10px solid pink; */
+    /* box-shadow: -10 0 10px 5px #ff00ff; */
+    box-shadow: 0 0 5px rgb(122, 114, 113),
+        0 0 10px rgb(170, 134, 162), 0 0 10px rgb(20, 64, 138),
+        0 0 30px rgb(138, 172, 183), 0 0 30px rgb(4, 35, 33);
+    /* animation: disco 2s linear infinite; */
+
   }
   
   figcaption {
@@ -119,21 +140,21 @@
   
   .about h2 {
     display: block;
-    color: white;
-    margin: 20px 0 0 70px;
+    color: rgb(255, 0, 0);
+    margin: 20px 0 15px 70px;
     font-size: 3rem;
   }
   
   .about h3 {
     display: block;
-    color: white;
-    margin: 10px 0 0 4.375rem;
+    color: rgb(255, 0, 0);
+    margin: 10px 0 15px 4.375rem;
     font-size: 3rem;
   }
   
   .about p {
     font-size: 2rem;
-    color: white;
+    color: rgb(255, 0, 0);
     margin: 10px 0 40px 70px;
   }
   
@@ -173,7 +194,7 @@
   
   .about .social-icons .icon {
     margin-right: 10px;
-    color: aqua;
+    color: rgba(255, 116, 2, 0.91);
     font-size: 45px;
     text-decoration: none;
     background-color: transparent;
@@ -201,9 +222,9 @@
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 0rem;
+      top: -0.6rem;
       right: 0rem;
-      background-color:hsl(0, 0%, 0%);
+      background-color:hsl(0, 4%, 87%);
       /* background-image: url(bg2.png); */
       padding: 2rem;
       animation: appearing 0.1s linear;
@@ -225,13 +246,13 @@
       display: block;
       /* padding: 0.5rem 0; */
       padding:0 0 1rem 0;
-      color: bisque;
+      color: rgb(19, 15, 9);
 
     }
    
     .content {
       display: block;
-      margin: 3% 20px 0 10px;
+      margin: 2% 20px 0 10px;
       user-select: none;
     }
   
@@ -242,9 +263,10 @@
       border-radius: 500px;
       margin: 20px auto;
       border: 5px solid pink;
-      box-shadow: 0 0 5px rgb(255, 25, 0),
-        0 0 20px rgb(137, 10, 109), 0 0 50px rgb(20, 64, 138),
-        0 0 250px rgb(23, 130, 165), 0 0 20px rgb(4, 35, 33);
+      box-shadow: 0 0 5px rgb(122, 114, 113),
+        0 0 10px rgb(170, 134, 162), 0 0 10px rgb(20, 64, 138),
+        0 0 150px rgb(138, 172, 183), 0 0 10px rgb(4, 35, 33);
+
     }
   
     .about button#more-about-btn {
@@ -283,34 +305,90 @@
     }
    
   
+}
 
-  @keyframes disco {
-    15% {
-      box-shadow: 0 0 20px 5px violet;
-    }
-    30% {
-      box-shadow: 0 0 20px 5px indigo;
+@keyframes disco {
+  15% {
+    box-shadow: 0 0 20px 5px violet;
+  }
+  30% {
+    box-shadow: 0 0 20px 5px indigo;
 
-    }
-    45% {
-      box-shadow: 0 0 20px 5px blue;
+  }
+  45% {
+    box-shadow: 0 0 20px 5px blue;
 
-    }
-    60% {
-      box-shadow: 0 0 20px 5px green;
+  }
+  60% {
+    box-shadow: 0 0 20px 5px green;
 
-    }
-    75% {
-      box-shadow: 0 0 20px 5px yellow;
+  }
+  75% {
+    box-shadow: 0 0 20px 5px yellow;
 
-    }
-    90% {
-      box-shadow: 0 0 20px 5px orange;
+  }
+  90% {
+    box-shadow: 0 0 20px 5px orange;
 
-    }
-    100% {
-      box-shadow: 0 0 20px 5px red;
+  }
+  100% {
+    box-shadow: 0 0 20px 5px red;
 
-    }
   }
 }
+
+.contact-h2{
+  font-size: 2.3rem;
+  margin-left: 120px;
+  color: red;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+form{
+  background: white transparent;
+  display: flex;
+  border: 8px solid rgba(11, 7, 7, 0.664);
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: 600px;
+  margin-top: 90px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+form h3{
+  color: #ff0606;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+form input, form textarea{
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: rgb(236, 233, 233);
+  font-size: 16px;
+  border-radius: 10px;
+
+}
+form button{
+  padding: 15px ;
+  background: #ff5361;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
+  border-radius: 40px;
+}
+
+
