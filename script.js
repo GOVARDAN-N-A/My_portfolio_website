@@ -42,19 +42,24 @@
 //   console.log(navbar, navbarToggle)
 // });
 
+var loading = document.getElementById("pre-loading")
+window.addEventListener("load", function(){
+  loading.style.display = "none";
+})
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const moreAboutBtn = document.getElementById('more-about-btn');
   const socialIcons = document.querySelector('.social-icons');
-  const navbarToggle = document.querySelector('.navbar-toggle');
+  const navbarToggle = document.querySelector('.navbar-toggle i');
   const navbar = document.querySelector('.navbar');
-
   moreAboutBtn.addEventListener('click', () => {
-    socialIcons.classList.toggle('active').style.overflow = 'visible';
-    display.scr
+    socialIcons.classList.toggle('active').style.overflow = "hidden";
   });
 
   navbarToggle.addEventListener('click', () => {
     navbar.style.display = 'block';
+    navbar.style.overflow = 'hidden'
   });
 
   // Function to handle window resize
@@ -70,10 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Initial call to handleWindowResize
   handleWindowResize();
 
-  // Listen for window resize events
   window.addEventListener('resize', handleWindowResize);
 
   document.addEventListener('click', (event) => {
@@ -88,3 +91,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+function sendEmail() {
+  Email.send({
+      Host: "smtp.gmail.com",
+      Username: "e1215024govardancse@gmail.com",
+      Password: "govardancse010820049003980804",
+      To: "govardanrough@gmail.com",
+      From: document.getElementById("email").value,
+      Subject: "New Contact Form Enquiry",
+      Body: "Name: " + document.getElementById("name").value +
+          "<br> Email: " + document.getElementById("email").value +
+          "<br> Phone: " + document.getElementById("phone").value +
+          "<br> Message: " + document.getElementById("message").value 
+  }).then(
+      message => {
+          alert("Message Sent Successfully");
+          resetForm();
+      }
+  );
+}
+
+function resetForm() {
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("phone").value = "";
+  document.getElementById("message").value = "";
+}
+
+console.log(loading)
