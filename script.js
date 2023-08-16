@@ -94,9 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function sendEmail() {
   Email.send({
       Host: "smtp.gmail.com",
-      Username: "e1215024govardancse@gmail.com",
-      Password: "govardancse010820049003980804",
-      To: "govardanrough@gmail.com",
+      Username: "",
+      Password: "",
+      To: "",
       From: document.getElementById("email").value,
       Subject: "New Contact Form Enquiry",
       Body: "Name: " + document.getElementById("name").value +
