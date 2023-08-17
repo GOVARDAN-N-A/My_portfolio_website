@@ -126,9 +126,9 @@
     margin: 0px 0 0 1.875rem;
     /* border: 10px solid pink; */
     /* box-shadow: -10 0 10px 5px #ff00ff; */
-    box-shadow: 0 0 5px rgb(122, 114, 113),
-        0 0 10px rgb(170, 134, 162), 0 0 10px rgb(20, 64, 138),
-        0 0 30px rgb(138, 172, 183), 0 0 30px rgb(4, 35, 33);
+    box-shadow: 0 0 1px rgb(122, 114, 113),
+        0 0 30px rgb(170, 134, 162), 0 0 10px rgb(20, 64, 138),
+        0 0 10px rgb(138, 172, 183), 0 0 10px rgb(4, 35, 33);
     /* animation: disco 2s linear infinite; */
 
   }
@@ -194,12 +194,21 @@
   
   .about .social-icons .icon {
     margin-right: 10px;
-/*     color: rgba(255, 116, 2, 0.91);*/
-    color: black;
-    font-size: 45px; 
+    color: rgba(17, 8, 0, 0.91);
+    font-size: 45px;
     text-decoration: none;
     background-color: transparent;
 
+  }
+
+  .about .social-icons .icon:first-child{
+    color: rgb(255, 0, 132);
+  }
+  .about .social-icons .icon:nth-child(2){
+    color: rgba(2, 241, 42, 0.863);
+  }
+  .about .social-icons .icon:nth-child(3){
+    color: rgba(0, 0, 255, 0.881);
   }
   
   @media (max-width: 932px) {
@@ -264,9 +273,9 @@
       border-radius: 500px;
       margin: 20px auto;
       border: 5px solid pink;
-      box-shadow: 0 0 5px rgb(122, 114, 113),
-        0 0 10px rgb(170, 134, 162), 0 0 10px rgb(20, 64, 138),
-        0 0 150px rgb(138, 172, 183), 0 0 10px rgb(4, 35, 33);
+      /* box-shadow: 100 0 5px rgb(122, 114, 113),
+        100 0 10px rgb(170, 134, 162), 100 0 10px rgb(20, 64, 138),
+        100 0 150px rgb(138, 172, 183), 100 0 10px rgb(4, 35, 33); */
 
     }
   
@@ -299,7 +308,7 @@
   
     .about .social-icons .icon {
       margin-right: 10px;
-      color: black;
+      /* color: black; */
       font-size: 30px;
       background-color: transparent;
       text-decoration: none;
