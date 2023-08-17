@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="about.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
 
     
 
@@ -60,6 +59,8 @@
     <h2 class="contact-h2">Contact</h2>
 
     <div class="container">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+
         <form  method="post"   onsubmit="sendEmail(); reset(); return false;">
            <h3>Get In Touch</h3>
            <input type="text" id="name" placeholder="Your Name" required>
@@ -70,7 +71,7 @@
         </form>
    </div>
 </section>
-    
+
     <script src="script.js" ></script>
       
 </body>
