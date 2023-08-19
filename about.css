@@ -397,6 +397,9 @@
       margin: 10px 0px 40px 20px;
  
     }
+    .changing_text .text{
+      font-size: 1.8rem;
+    }
 
     /* .about:is(h2, h3, p){
       font-size: 10rem;
