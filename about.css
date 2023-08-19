@@ -166,7 +166,7 @@
  .changing_text .text{
     position: relative;
     color: #0fff06;
-    font-size: 2rem;
+    font-size: 1rem;
     overflow: hidden;
     font-weight:900px;
   }
