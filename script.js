@@ -42,35 +42,64 @@
 //   console.log(navbar, navbarToggle)
 // });
 
+// var loading = document.getElementById("pre-loading")
+// window.addEventListener("load", function(){
+//   loading.style.display = "none";
+// })
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const moreAboutBtn = document.getElementById('more-about-btn');
+//   const socialIcons = document.querySelector('.social-icons');
+//   const navbarToggle = document.querySelector('.navbar-toggle i');
+//   const navbar = document.querySelector('.navbar');
+//   moreAboutBtn.addEventListener('click', () => {
+//     socialIcons.classList.toggle('active').style.overflow = "hidden";
+//   });
+
+//   navbarToggle.addEventListener('click', () => {
+//     navbar.style.display = 'block';
+//     navbar.style.overflow = 'hidden'
+//   });
+
+//   // Function to handle window resize
+//   function handleWindowResize() {
+//     const windowWidth = window.innerWidth;
+
+//     if (windowWidth <= 932) {
+//       navbarToggle.style.display = 'block';
+//       navbar.style.display = 'none';
+//     } else {
+//       navbarToggle.style.display = 'none';
+//       navbar.style.display = 'block';
+//     }
+//   }
 var loading = document.getElementById("pre-loading")
 window.addEventListener("load", function(){
   loading.style.display = "none";
 })
-
-
 document.addEventListener('DOMContentLoaded', function() {
   const moreAboutBtn = document.getElementById('more-about-btn');
-  const socialIcons = document.querySelector('.social-icons');
+  const socialIcons = document.getElementById('social-icons');
   const navbarToggle = document.querySelector('.navbar-toggle i');
   const navbar = document.querySelector('.navbar');
+  
   moreAboutBtn.addEventListener('click', () => {
-    socialIcons.classList.toggle('active').style.overflow = "hidden";
+    socialIcons.classList.toggle('active');
   });
 
   navbarToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
     navbar.style.display = 'block';
     navbar.style.overflow = 'hidden'
   });
 
-  // Function to handle window resize
   function handleWindowResize() {
     const windowWidth = window.innerWidth;
 
     if (windowWidth <= 932) {
-      navbarToggle.style.display = 'block';
       navbar.style.display = 'none';
     } else {
-      navbarToggle.style.display = 'none';
       navbar.style.display = 'block';
     }
   }
@@ -120,3 +149,37 @@ function resetForm() {
 }
 
 console.log(loading)
+
+// const text = document.querySelector(".sec-text");
+// const textLoad = ()=>{
+//   setTimeout(()=>{
+//     text.textContent = "Software Engineer";
+//   }, 0);
+
+//   setTimeout(()=>{
+//     text.textContent = "Web Developer";
+//   }, 4000);
+
+//   setTimeout(()=>{
+//     text.textContent = "Python Developer";
+//   }, 8000);
+
+
+// }
+// textLoad();
+// setInterval(textLoad,8000);
+
+
+const text = document.querySelector(".sec-text");
+const textOptions = ["Software Engineer", "Web Developer", "Python Developer"];
+let currentIndex = 0;
+
+const updateText = () => {
+  text.textContent = textOptions[currentIndex];
+  currentIndex = (currentIndex + 1) % textOptions.length;
+};
+
+updateText(); // Set initial text
+
+const textInterval = setInterval(updateText, 4020);
+
