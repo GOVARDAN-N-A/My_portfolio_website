@@ -8,14 +8,15 @@
 
   body {
     min-height: 100vh;
-    background-color: rgb(2, 2, 54);
-    /* background-image: url("images/bstar.jpg"); */
+    /* background-image: url("images/me3.5.png"); */
     background-color: #f0f1f2;
     z-index: -1;
-    background-size: cover;
+    /* background-size: cover; */
     font-family: 'Times New Roman', Times, serif;
     animation:  bgcol 10s ease-in-out infinite;
     animation-delay: 1s;
+    background-color: #1c1e2b;
+
   }
 
   #pre-loading{
@@ -60,6 +61,7 @@
     justify-content: space-between;
     align-items: center;
     animation: head_top 0.8s linear;
+    border-bottom: 8px solid #651ef4;
   }
   @keyframes head_top{
     0%{
@@ -67,15 +69,15 @@
     }
   }
   .header h1 {
-    color: rgb(255, 0, 0);
-    font-size: 2.5rem;
+    color: #f1f2f3;
+    font-size: 3rem;
     user-select: none;
   }
   
   .header_btn {
     text-decoration: none;
-    color: rgb(255, 0, 0);
-    padding: 0.8rem 2rem;
+    color: #f0f1f2;
+    padding: 0.8rem 1.2rem;
     margin-right: 0;
     font-size: 1.5rem;
     border-radius: 10px;
@@ -106,29 +108,31 @@
   
   .content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: row;
-    margin: 8% 20px 0 10px;
+    margin: 8% 400px 0 150px;
     user-select: none;
   }
   
   .content h2:hover,
   .content h3:hover,
   .content p:hover {
-    color: rgba(255, 0, 0, 0.69);
+    color: #febc2e;
   }
   
   .image img {
-    width: 25rem;
-    height: 25rem;
+    width: 16rem;
+    height: 16rem;
+    position: static;
+    bottom: 20px;
     border-radius: 500px;
     display: block;
     margin: 0px 0 0 1.875rem;
     /* border: 10px solid pink; */
     /* box-shadow: -10 0 10px 5px #ff00ff; */
-    box-shadow: 0 0 1px rgb(122, 114, 113),
+    /* box-shadow: 0 0 1px rgb(122, 114, 113),
         0 0 30px rgb(170, 134, 162), 0 0 10px rgb(20, 64, 138),
-        0 0 10px rgb(138, 172, 183), 0 0 10px rgb(4, 35, 33);
+        0 0 10px rgb(138, 172, 183), 0 0 10px rgb(4, 35, 33); */
     /* animation: disco 2s linear infinite; */
 
   }
@@ -137,24 +141,64 @@
     position: absolute;
     left: -10000px;
   }
+
   
   .about h2 {
     display: block;
-    color: rgb(255, 0, 0);
+    color: #f0f1f2;
     margin: 20px 0 15px 70px;
-    font-size: 3rem;
+    font-size: 2rem;
   }
   
   .about h3 {
     display: block;
-    color: rgb(255, 0, 0);
+    color: #febc2e;
     margin: 10px 0 15px 4.375rem;
-    font-size: 3rem;
+    font-size: 5rem;
   }
+  .changing_text
+  {
+    margin: 20px 0 15px 70px;
+    /* width: 246px; */
+    overflow: hidden;
+}
+
+
+ .changing_text .text{
+    position: relative;
+    color: #0fff06;
+    font-size: 2rem;
+    overflow: hidden;
+    font-weight:900px;
+  }
+  .changing_text .text .first-text{
+    color: #f0f1f2;
   
+  }
+  .changing_text .sec-text::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1c1e2b;
+    border-left: 2px solid #febc2e;
+    animation: animate 4s steps(12) infinite;
+    
+  }
+
+  @keyframes animate{
+    40%,60%{
+      left:100%;
+    }
+    100%{
+      left: 0%;
+    }
+  }  
   .about p {
     font-size: 2rem;
-    color: rgb(255, 0, 0);
+    color: #f0f1f2;
     margin: 10px 0 40px 70px;
   }
   
@@ -210,6 +254,9 @@
   .about .social-icons .icon:nth-child(3){
     color: rgba(0, 0, 255, 0.881);
   }
+  .about .social-icons .icon:last-child{
+    color: #a5dff0;
+  }
   
   @media (max-width: 932px) {
     .about{
@@ -232,12 +279,12 @@
       display: none;
       flex-direction: column;
       position: absolute;
-      top: -0.6rem;
+      top: 1.5rem;
       right: 0rem;
       background-color:hsl(0, 4%, 87%);
       /* background-image: url(bg2.png); */
-      padding: 2rem;
-      animation: appearing 0.1s linear;
+      padding: 1rem;
+      animation: appearing 0.5s linear;
 
     }
 
@@ -286,10 +333,18 @@
     }
   
     .about h2,
-    .about h3,
     .about p {
       font-size: 2rem;
-      margin: 10px 0 40px 20px;
+      margin: 10px 0px 40px 20px;
+    }
+    .about h3{
+      font-size: 3rem;
+      margin: 10px 0px 40px 20px;
+
+    }
+    .changing_text{
+      margin: 10px 0px 40px 20px;
+ 
     }
 
     /* .about:is(h2, h3, p){
