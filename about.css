@@ -166,7 +166,7 @@
  .changing_text .text{
     position: relative;
     color: #0fff06;
-    font-size: 1rem;
+    font-size: 2rem;
     overflow: hidden;
     font-weight:900px;
   }
@@ -345,6 +345,10 @@
       margin: 10px 0px 40px 20px;
  
     }
+
+      .changing_text .text{
+          font-size: 1rem;
+      }
 
     /* .about:is(h2, h3, p){
       font-size: 10rem;
