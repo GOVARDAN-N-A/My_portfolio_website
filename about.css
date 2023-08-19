@@ -9,12 +9,14 @@
   body {
     min-height: 100vh;
     /* background-image: url("images/me3.5.png"); */
+    /* background-color: #f0f1f2; */
     z-index: -1;
     /* background-size: cover; */
     font-family: 'Times New Roman', Times, serif;
     animation:  bgcol 10s ease-in-out infinite;
     animation-delay: 1s;
     background-color: #1c1e2b;
+    /* background-image: url(images/star.gif); */
 
   }
 
@@ -86,7 +88,7 @@
   .header_btn:hover {
     /* border: 1px solid aqua; */
 
-    color: rgb(0, 0, 0)
+    color: hsla(210, 8%, 95%, 0.823)
   }
   
   .navbar-toggle {
@@ -256,7 +258,57 @@
   .about .social-icons .icon:last-child{
     color: #a5dff0;
   }
-  
+  .popup{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%) scale(0.1); */
+    text-align: center;
+    transform: translate(-50%,-50%) scale(1);
+    padding: 0 30px 30px;
+    /* visibility: hidden; */
+    transition: transform 0.4s, top 0.4s;
+  }
+  .open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+  }
+
+  .popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .popup h3{
+    font-size: 38px;
+    font-weight: 900;
+    margin: 30px 0 10px;
+  }
+  .popup p{
+    font-weight: 900;
+  }
+  .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    /* background: #6fd649; */
+    color: whitesmoke;
+    border: 0;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    background: #00ffff;
+    box-shadow: inset 20px 20px 60px #ff00cc,
+            inset -20px -20px 60px #00aaff;
+
+  }
+ 
   @media (max-width: 932px) {
     .about{
       margin-left: 20px;
@@ -318,7 +370,7 @@
       height: 10rem;
       border-radius: 500px;
       margin: 20px auto;
-      border: 5px solid pink;
+      /* border: 5px solid pink; */
       /* box-shadow: 100 0 5px rgb(122, 114, 113),
         100 0 10px rgb(170, 134, 162), 100 0 10px rgb(20, 64, 138),
         100 0 150px rgb(138, 172, 183), 100 0 10px rgb(4, 35, 33); */
@@ -345,10 +397,6 @@
       margin: 10px 0px 40px 20px;
  
     }
-
-      .changing_text .text{
-          font-size: 1.3rem;
-      }
 
     /* .about:is(h2, h3, p){
       font-size: 10rem;
@@ -408,7 +456,7 @@
 .contact-h2{
   font-size: 2.3rem;
   margin-left: 120px;
-  color: red;
+  color: rgb(60, 255, 0);
 }
 .container{
   width: 100%;
@@ -421,7 +469,7 @@
 form{
   background: white transparent;
   display: flex;
-  border: 8px solid rgba(11, 7, 7, 0.664);
+  border: 8px solid #651ef4;
   flex-direction: column;
   padding: 2vw 4vw;
   width: 90%;
@@ -431,7 +479,7 @@ form{
   margin-bottom: 50px;
 }
 form h3{
-  color: #ff0606;
+  color: #febc2e;
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 20px;
@@ -441,14 +489,14 @@ form input, form textarea{
   margin: 10px 0;
   padding: 20px;
   outline: none;
-  background: rgb(236, 233, 233);
+  background: #e7dbff;
   font-size: 16px;
   border-radius: 10px;
 
 }
 form button{
   padding: 15px ;
-  background: #ff5361;
+  /* background: #651ef4; */
   color: white;
   font-size: 18px;
   border: 0;
@@ -457,6 +505,9 @@ form button{
   width: 150px;
   margin: 20px auto 0;
   border-radius: 40px;
+  background: #00ffff;
+    box-shadow: inset 20px 20px 60px #a9cfdb,
+            inset -20px -20px 60px #ff0084;
 }
 
 
